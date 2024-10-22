@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background-image:radial-gradient(circle,yellow,rgb(79, 232, 115));
+    background-attachment: fixed;
+}
+header{
+    position: sticky;
+    background-color: rgb(79, 232, 115);
+    border-bottom: 2px solid rgb(79, 232, 115);
+    padding-top: 12px;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    border-radius: 35px;
+    transition: .3s ease-in;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+}
+nav a:hover{
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    border-top: 1px solid rgb(0, 0, 0, 0.2);
+    background-color:rgb(0, 0, 0,0.2);
+    text-decoration: none;
+    color: black;
+}
+.sidebar{
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* position: absolute; */
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    text-decoration: none;
+    color: black;
+    font-family: Playwrite Hrvatska;
+    width: 100%;
+}
+.sidebar:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+nav :first-child{
+    margin-right: auto;
+}
+.menubutton{
+    display: none;
+}
+ul input{
+    padding: 5px;
+    padding-left: 10px;
+    margin-right: 5px;
+    margin-left: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 50%;
+    color: black;
+    font-family: Bubblegum Sans;
+}
+nav img{
+   padding-left: 20px;
+}
+                                                          /* slide banner */
+.slider{
+    width: 100%;
+    height: 200px;
+    padding-right: 10px;
+    overflow: hidden;
+}
+figure{
+    position: relative;
+    left: 0;
+    width: 400%;
+    animation: 20s slide infinite;
+}
+.slide{
+    position: relative;
+    width: 25%;
+    float: left;
+}
+.slide img{
+    width: 100%;
+    height: min-content;
+    background-size: contain;
+}
+                                                     /* body of the site */
+.container{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    /* float: inline-start; */
+    border-radius: 20px;
+    font-family: Just Another Hand;            ;
+    background-color: transparent;
+}
+.card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+    transition: all 0.5s ease; 
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+.front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: black;
+    cursor: default;
+    border: 2px solid #ffff00;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+.back{
+    
+    border-radius: 20px;
+    border: 2px solid #ffff00;
+    width: 100%;
+    cursor: default;
+    /* text-align: center; */
+    height: 100%;
+    backface-visibility: hidden;
+    background-color:rgba(0, 0, 0,0.2);
+    color: black;
+    transform: rotateY(180deg);
+    transition: 0.5s ease-in-out;
+}
+.back:hover{
+    box-shadow: 0 0 20px #ffff00;
+}
+.front img{
+    width: 100%;
+    background-size:cover;
+    background-repeat: repeat;
+    border-radius: 5px;
+    height: 70%;
+}
+.back button{
+    padding: 15px;
+    border-radius: 20px;
+    border:2px solid #ffff00;
+    width: 80%;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 5px;
+    font-style: oblique;
+    margin:0 0 0 25px ;          
+    transition: 0.5s ease-in-out;  
+}
+.back button:hover ,.back{
+    box-shadow: 0 0 20px #ffff00;
+}
+h1 ,h2 {
+    padding-left: 20px;
+}
+h2, b{
+    letter-spacing: 5px;
+}
+.container p{
+    text-align: center;
+    padding: 8px;
+}
+.back p{
+    padding: 5px;
+}
+h1{
+    padding-top: 4px;
+    letter-spacing: 3px;
+}
+b{
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.star img{
+    width: auto;
+    height: auto; 
+}
+.star p{
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: -5px;
+}
+.star h2{
+    margin-top:3px;  
+}
+.star p{
+    margin-top: -13px;
+}
+.main-container{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    overflow: hidden;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+@keyframes slide{
+    0%{
+        left: 0;
+    }
+    10%{
+        left: 0;
+    }
+    20%{
+        left: -100%;
+     } 
+    30%{
+        left: -100%;
+    }
+    40%{
+        left: -200%;
+    }
+    50%{
+        left: -200%;
+    } 
+     55%{
+        left: -300%;
+    } 
+    65%{
+        left: -300px;
+    }
+    70%{
+        left: -200%;
+    } 
+    76%{
+        left: -200%;
+    }
+    85%{
+        left: -100%;
+    } 
+    95%{
+        left: -100%;
+    }
+    100%{
+        left:0;   
+    }
+    
+}
+
+@media (max-width:800px){
+    .hideonmobile{
+        display: none;
+    }
+    .menubutton{
+        display: block;
+    }
+}
+@media (max-width:400px){
+    .sidebar{
+        width: 80%;
+        color: black;
+    }
+    ul h1{
+        display: none;
+    }
+    .main-container{
+        justify-content: center;
+        align-items: center;
+        place-content: center;
+        margin-top: -20px;
+        margin-left:5px;
+    }
+}
+@media (max-width:650px){
+    .sidebar{
+        width: 80%;
+        color: black;
+    }
+    ul h1{
+        display: none;
+    }
+}
+@media (max-width:700px){
+    .main-container{
+        justify-content: center;
+        place-items: center;
+        place-self: center;
+        justify-items: center;
+        justify-self: center;
+    }
+}
